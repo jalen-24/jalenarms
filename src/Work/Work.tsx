@@ -5,6 +5,7 @@ import pythonLogo from "../assets/python.webp"
 
 import swiftuiLgo from "../assets/swiftui.png"
 import swiftLogo from "../assets/swift.svg"
+import Carvana from './Carvana';
 import CommunityBridges from './CommunityBridges';
 import HotSpot from './HotSpot';
 import SillySocksAndMore from './SillySocksAndMore';
@@ -24,6 +25,8 @@ const Work = ({onIsInView}: {onIsInView: () => void}) => {
       <div className="flex flex-col gap-2">
         <p className="text-3xl text-white font-semibold">Work</p>
       </div>
+      <Carvana />
+
       <CommunityBridges />
 
       <HotSpot />

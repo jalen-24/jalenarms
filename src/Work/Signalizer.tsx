@@ -30,26 +30,19 @@ const Signalizer = () => {
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Architected and developed a real-time financial data platform
-                            using Next.js, providing users with access to up-to-the-minute
-                            stock market and cryptocurrency news and pricing information.
+                            <span className="text-white font-medium">Real-time platform</span> — architected a Next.js application delivering up-to-the-minute stock and cryptocurrency pricing and news.
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Enhanced data visualization by implementing Chart.js, allowing
-                            users to dynamically analyze financial trends across customizable
-                            timeframes, resulting in improved user engagement and data
-                            comprehension.
+                            <span className="text-white font-medium">Chart.js</span> — let users analyze trends across customizable timeframes, making the underlying data far easier to interpret.
                             </p>
                         </div>
                         {/* <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Integrated Stripe to implement a monthly subscription model,
-                            enabling access to premium financial data and ensuring recurring
-                            revenue generation.
+                            <span className="text-white font-medium">Stripe subscriptions</span> — implemented a monthly billing model that gated premium data and created recurring revenue.
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
@@ -86,7 +79,7 @@ const Signalizer = () => {
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Designed new database table structures for all new features using a postgres database
+                            <span className="text-white font-medium">Postgres schema</span> — designed the table structures backing every new feature
                             </p>
                         </div>
                         

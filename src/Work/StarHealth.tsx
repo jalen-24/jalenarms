@@ -30,18 +30,13 @@ const StarHealth = () => {
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Led the migration of the application to a modern Next.js
-                            architecture utilizing the T3-Stack, leveraging tRPC for
-                            end-to-end type safety and Prisma as an ORM for efficient database
-                            interactions.
+                            <span className="text-white font-medium">Next.js T3 migration</span> — led the migration to a T3 stack, using tRPC for end-to-end type safety and Prisma as the ORM, eliminating a class of client/server runtime errors.
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Developed a dynamic directory page featuring advanced search and
-                            filtering capabilities, enabling users to efficiently navigate and
-                            explore the application's extensive dataset.
+                            <span className="text-white font-medium">Directory search</span> — built a page with search and filtering that made a large record set navigable for end users.
                             </p>
                         </div>
                     </div>
@@ -53,20 +48,19 @@ const StarHealth = () => {
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Restructured the existing database schema, resulting in improved
-                            data retrieval performance and enhanced frontend functionality.
+                            <span className="text-white font-medium">Schema restructuring</span> — reworked the existing schema, improving data retrieval performance and unblocking frontend features.
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Created views to improve execution for certain queries
+                            <span className="text-white font-medium">Views</span> — precomputed common joins to speed up the app's heaviest queries
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Indexed certain tables to compliment the app's search and filter feature
+                            <span className="text-white font-medium">Indexing</span> — indexed the tables behind search and filtering so the directory stayed responsive at scale
                             </p>
                         </div>
                     </div>

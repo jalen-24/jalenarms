@@ -28,24 +28,19 @@ const SillySocksAndMore = () => {
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Led the development of an e-commerce platform
-                            using Go, React.js, and Tailwind CSS, enabling online product
-                            sales using Stripe API integration.
+                            <span className="text-white font-medium">E-commerce platform</span> — led development on a Go, React, and Tailwind stack, taking the business from no online presence to selling products directly.
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Implemented product search and filtering functionalities,
-                            allowing customers to easily find items by category and keywords.
+                            <span className="text-white font-medium">Search & filtering</span> — let customers find items by category and keyword instead of scrolling the full catalog.
                             </p>
                         </div>
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                            Designed and developed an intuitive admin interface, providing
-                            comprehensive control over order management, product catalogs,
-                            and internal operations.
+                            <span className="text-white font-medium">Admin interface</span> — gave the owner direct control over orders, product catalog, and internal operations without developer involvement.
                             </p>
                         </div>
                     </div>
@@ -57,14 +52,14 @@ const SillySocksAndMore = () => {
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                                Created an http server to handle requests from the client and control the flow of data throughout the application
+                                <span className="text-white font-medium">Go HTTP server</span> — handled client requests and controlled data flow throughout the application
                             </p>
                         </div>
 
                         <div className="flex items-start gap-4">
                             <p>-</p>
                             <p className="text-sm text-zinc-300">
-                                Integrated stripe functionality for redirecting the user to a personalized ordering page, and handling stripe webhooks for payment status
+                                <span className="text-white font-medium">Stripe checkout</span> — redirected users to a personalized ordering page and handled webhooks to keep payment status in sync
                             </p>
                         </div>
 

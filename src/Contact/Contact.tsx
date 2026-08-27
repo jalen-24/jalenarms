@@ -93,7 +93,7 @@ const Contact = ({onIsInView}: {onIsInView: () => void}) => {
                             </div>
                             <div className="flex flex-col">
                                 <p className='text-zinc-400'>Phone</p>
-                                <a href='mailto:jalenarms@outlook.com' className='text-cyan-400'>(614) 596-8904</a>
+                                <a href='tel:+16145968904' className='text-cyan-400'>(614) 596-8904</a>
                             </div>
                         </div>
                         {error && <p className='text-sm text-red-400'>{error}</p>}
