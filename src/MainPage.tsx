@@ -21,7 +21,6 @@ import StarHealth from "./Work/StarHealth";
 
 export type AppView = "About" | "Work" | "Reviews" | "Contact"
 
-const resumeUrl = "https://firebasestorage.googleapis.com/v0/b/silly-socks-e0923.firebasestorage.app/o/Jalen%20Arms%20-%20Resume%202025.pdf?alt=media&token=a4cfc56f-84e5-481c-87bb-16f42dc88f31"
 
 const MainPage = () => {
     const ref = useRef(null);
@@ -122,8 +121,8 @@ const MainPage = () => {
           <img className='shadow-md shadow-neutral-700 w-8 h-8 mb-2 rounded-full hover:shadow-lg hover:shadow-neutral-600 cursor-pointer object-cover' src="https://res.cloudinary.com/dvlhy87zl/image/upload/v1740702434/ol51x81xxhex8v7mvqbu.png" />
           <div className="flex flex-col">
             <p className="text-base text-zinc-400 font-semibold">Jalen Arms - Jalenarms@outlook.com</p>
-            <p className="text-white text-sm mt-1">Fullstack</p>
-            <p className="text-cyan-400 text-sm">Software Developer</p>
+            <p className="text-white text-sm mt-1">Backend &amp; Distributed Systems</p>
+            <p className="text-cyan-400 text-sm">Software Engineer</p>
           </div>
           
         </div>  
@@ -131,20 +130,19 @@ const MainPage = () => {
         <div className="flex flex-col gap-5 col-span-2">
           <p className="text-sm text-white">Socials</p>
           <div className="flex flex-col gap-2">
-            <p className="text-sm text-zinc-300">Github</p>
-            <p className="text-sm text-zinc-300">LinkedIn</p>
-            <p className="text-sm text-zinc-300">Upwork</p>
-
+            <a href="https://github.com/jalenarms1" target="_blank" rel="noreferrer" className="text-sm text-zinc-300 hover:text-cyan-400 w-fit">Github</a>
+            <a href="https://linkedin.com/in/jalen-arms-38304a241" target="_blank" rel="noreferrer" className="text-sm text-zinc-300 hover:text-cyan-400 w-fit">LinkedIn</a>
+            <a href="https://www.upwork.com/freelancers/~01cd6b779e11f90eb8?mp_source=share" target="_blank" rel="noreferrer" className="text-sm text-zinc-300 hover:text-cyan-400 w-fit">Upwork</a>
           </div>
         </div>
 
         <div className="flex flex-col gap-5 col-span-2">
           <p className="text-sm text-white">Links</p>
           <div className="flex flex-col gap-2">
-            <p onClick={() => handleScroll("About")} className="text-sm text-zinc-300 active:underline">About</p>
-            <p onClick={() => handleScroll("Work")} className="text-sm text-zinc-300 active:underline ">Work</p>
-            <p onClick={() => handleScroll("Reviews")} className="text-sm text-zinc-300 active:underline">Reviews</p>
-            <p onClick={() => handleScroll("Contact")} className="text-sm text-zinc-300 active:underline">Contact</p>
+            <button onClick={() => handleScroll("About")} className="text-sm text-zinc-300 hover:text-cyan-400 text-left w-fit">About</button>
+            <button onClick={() => handleScroll("Work")} className="text-sm text-zinc-300 hover:text-cyan-400 text-left w-fit">Work</button>
+            <button onClick={() => handleScroll("Reviews")} className="text-sm text-zinc-300 hover:text-cyan-400 text-left w-fit">Reviews</button>
+            <button onClick={() => handleScroll("Contact")} className="text-sm text-zinc-300 hover:text-cyan-400 text-left w-fit">Contact</button>
 
 
           </div>
@@ -153,7 +151,7 @@ const MainPage = () => {
         <div className="flex flex-col gap-5 col-span-2">
           <p className="text-sm text-white">Resume</p>
           <div className="flex flex-col gap-2 cursor-pointer">
-            <p onClick={downloadResume} className="text-sm text-zinc-300 active:underline">Download CV</p>
+            <button onClick={downloadResume} className="text-sm text-zinc-300 hover:text-cyan-400 text-left w-fit">Download CV</button>
 
           </div>
         </div>

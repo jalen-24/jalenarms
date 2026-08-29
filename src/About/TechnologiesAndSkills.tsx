@@ -1,25 +1,52 @@
-import React, { useEffect, useRef } from 'react'
-import Divider from '@/Shared/Divider';
+import { useEffect, useRef, type ReactNode } from 'react'
 import reactLogo from "../assets/react.svg"
-import goLogo from "../assets/go.png"
 import pythonLogo from "../assets/python.webp"
 import sqlLogo from "../assets/sql1.png"
-import nodeLogo from "../assets/nodejs.png"
 import tailwindLogo from "../assets/tailwind.png"
-import cssLogo from "../assets/css.svg"
-import htmlLogo from "../assets/html.webp"
-import javascriptLogo from "../assets/javascript.webp"
 import swiftui from "../assets/swiftui.png"
-import swift from "../assets/swift.svg"
-import csharpLog from "../assets/csharp-logo.png"
+import csharpLogo from "../assets/csharp-logo.png"
 import dotnetLogo from "../assets/dotnet-logo.svg"
 import blazorLogo from "../assets/blazorLogo.png"
+import { SiGraphql, SiElasticsearch, SiTypescript, SiSwift, SiGit } from "react-icons/si"
+import { VscAzure, VscAzureDevops } from "react-icons/vsc"
 import { motion, useInView } from "framer-motion"
 
+type Tech = { name: string; img?: string; icon?: ReactNode }
 
-const TechnologiesAndSkills = ({onIsInView}: {onIsInView: () => void}) => {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: false })
+const groups: { label: string; items: Tech[] }[] = [
+    {
+        label: "Backend & Data",
+        items: [
+            { name: "C#", img: csharpLogo },
+            { name: ".NET / ASP.NET Core", img: dotnetLogo },
+            { name: "GraphQL", icon: <SiGraphql className="w-6 h-6 text-pink-500" /> },
+            { name: "Elasticsearch", icon: <SiElasticsearch className="w-6 h-6 text-cyan-400" /> },
+            { name: "SQL Server", img: sqlLogo },
+            { name: "Python", img: pythonLogo },
+        ],
+    },
+    {
+        label: "Frontend & Mobile",
+        items: [
+            { name: "React.js", img: reactLogo },
+            { name: "TypeScript", icon: <SiTypescript className="w-6 h-6 text-blue-400" /> },
+            { name: "Blazor / WASM", img: blazorLogo },
+            { name: "Tailwind CSS", img: tailwindLogo },
+            { name: "SwiftUI", img: swiftui },
+            { name: "Swift", icon: <SiSwift className="w-6 h-6 text-orange-500" /> },
+        ],
+    },
+    {
+        label: "Platform & Tooling",
+        items: [
+            { name: "Azure", icon: <VscAzure className="w-6 h-6 text-sky-400" /> },
+            { name: "Azure DevOps", icon: <VscAzureDevops className="w-6 h-6 text-blue-400" /> },
+            { name: "CI/CD", icon: <SiGit className="w-6 h-6 text-orange-600" /> },
+        ],
+    },
+]
+
+const TechnologiesAndSkills = ({ onIsInView }: { onIsInView: () => void }) => {
     const containerRef = useRef(null)
     const containerInView = useInView(containerRef, { once: false })
 
@@ -27,112 +54,43 @@ const TechnologiesAndSkills = ({onIsInView}: {onIsInView: () => void}) => {
         if (containerInView) { onIsInView() }
     }, [containerInView])
 
-  return (
-    <motion.div
-        ref={containerRef} 
-        className="flex flex-col w-full lg:w-[75%] sm:w-[80%] mx-auto gap-7  justify-start text-white sm:p-0  md:mt-0 "
-        initial={{ opacity: 0, y: 50 }}  // Start hidden and slightly below
-        animate={containerInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
-        transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-    >
-        <div className="flex flex-col">
-            <h2 className="text-3xl font-semibold text-white mb-3">Technologies I Use</h2>
-            <p className='text-sm text-zinc-300 pb-2'>This list includes languages and frameworks I use on any given project, but is not limited to what I am capable of using.</p>
-            {/* <Divider /> */}
-
-        </div>
-        <div className="md:flex items-center grid grid-cols-2 sm:gap-2 gap-5 flex-wrap">
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={csharpLog} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>C#</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-2 sm:w-60 w-full">
-                <img src={dotnetLogo} alt='react-logo' className='w-12 h-10' />
-                <div className="flex flex-col ">
-                    <p>.NET</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-2 sm:w-60 w-full">
-                <img src={reactLogo} alt='react-logo' className='w-10 h-10' />
-                <div className="flex flex-col ">
-                    <p>React.js</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            {/* <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={nextjs} alt='react-logo' className='w-8 object-contain h-8' />
-                <div className="flex flex-col ">
-                    <p>Next.js</p>
-                    <p className='text-xs text-zinc-400'>2+ years</p>
-                </div>
-            </div> */}
-
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={blazorLogo} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>Blazor</p>
-                    <p className='text-xs text-zinc-400'>2+ years</p>
-                </div>
+    return (
+        <motion.div
+            ref={containerRef}
+            className="flex flex-col w-full lg:w-[75%] sm:w-[80%] mx-auto gap-7 justify-start text-white sm:p-0 md:mt-0"
+            initial={{ opacity: 0, y: 50 }}
+            animate={containerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+            <div className="flex flex-col">
+                <h2 className="text-3xl font-semibold text-white mb-3">Technologies I Use</h2>
+                <p className='text-sm text-zinc-300 pb-2'>What I reach for day to day. Not a limit on what I can pick up.</p>
             </div>
 
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={pythonLogo} alt='react-logo' className='w-10 h-10' />
-                <div className="flex flex-col ">
-                    <p>Python</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
+            <div className="flex flex-col gap-8">
+                {groups.map((group) => (
+                    <div key={group.label} className="flex flex-col gap-3">
+                        <p className="text-sm text-cyan-400 font-medium">{group.label}</p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                            {group.items.map((tech) => (
+                                <div
+                                    key={tech.name}
+                                    className="flex items-center bg-zinc-950 p-3 rounded-md gap-3 border border-zinc-800/80"
+                                >
+                                    <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                                        {tech.img
+                                            ? <img src={tech.img} alt="" className="w-6 h-6 object-contain" />
+                                            : tech.icon}
+                                    </div>
+                                    <p className="text-sm">{tech.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={sqlLogo} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>SQL</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={tailwindLogo} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>Tailwind CSS</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={htmlLogo} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>HTML</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={javascriptLogo} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>JavaScript</p>
-                    <p className='text-xs text-zinc-400'>3+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={swiftui} alt='react-logo' className='w-10 object-contain h-10' />
-                <div className="flex flex-col ">
-                    <p>SwiftUI</p>
-                    <p className='text-xs text-zinc-400'>1+ years</p>
-                </div>
-            </div>
-            <div className="flex items-center bg-zinc-950 p-2 rounded-md gap-3 sm:w-60 w-full">
-                <img src={swift} alt='react-logo' className='w-8 object-contain h-8' />
-                <div className="flex flex-col ">
-                    <p>Swift</p>
-                    <p className='text-xs text-zinc-400'>1+ years</p>
-                </div>
-            </div>
-            
-
-        </div>
-    </motion.div>
-  )
+        </motion.div>
+    )
 }
 
 export default TechnologiesAndSkills

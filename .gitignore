@@ -1,4 +1,10 @@
 node_modules
+dist
 
+# Local env files — these are inlined into the client bundle at build time,
+# so never put anything secret here.
 .env
+.env.local
+.env.*.local
 
+.DS_Store
