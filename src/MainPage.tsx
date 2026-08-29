@@ -21,7 +21,6 @@ import StarHealth from "./Work/StarHealth";
 
 export type AppView = "About" | "Work" | "Reviews" | "Contact"
 
-const resumeUrl = "https://firebasestorage.googleapis.com/v0/b/silly-socks-e0923.firebasestorage.app/o/Jalen%20Arms%20-%20Resume%202025.pdf?alt=media&token=a4cfc56f-84e5-481c-87bb-16f42dc88f31"
 
 const MainPage = () => {
     const ref = useRef(null);
