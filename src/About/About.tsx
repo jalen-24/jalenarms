@@ -34,9 +34,9 @@ const About = ({onIsInView, onDownloadResume}: {onIsInView: () => void, onDownlo
 
                     <p className="md:text-4xl lg:text-5xl xl:text-6xl text-3xl font-semibold text-white">Backend &amp; Distributed Systems</p>
                     <p className="text-cyan-400 md:text-4xl lg:text-5xl xl:text-6xl text-3xl font-semibold">Software Engineer</p>
-                    <p className="text-zinc-300  mt-5 font-light font-app">Hi, I’m Jalen Arms — a software engineer who builds and operates .NET services in production. At Carvana I work on the distributed microservices, GraphQL subgraphs, and Elasticsearch-backed search behind ADESA Clear, their digital wholesale auction platform.</p>
+                    <p className="text-zinc-300  mt-5 font-light font-app">Hi, I’m Jalen Arms — a software engineer who works mostly in C# and .NET. I build backend APIs and services, the async messaging that connects them, and the data layer underneath, in both SQL and NoSQL databases.</p>
 
-              <p className="text-zinc-300  mt-5 font-light font-app">I'm comfortable across the whole stack — React, Blazor WASM, and SwiftUI on the client, SQL Server and Python ETL on the data side — and I like owning a system end to end, from schema design through CI/CD and production incident response.</p>
+              <p className="text-zinc-300  mt-5 font-light font-app">I also set up CI/CD and handle deployments, write Python for data automation, and build front ends in Blazor WASM or React when a project needs one.</p>
                     <div className="flex items-center mt-5 gap-2">
                         {/* <a href='https://calendly.com/dev-test-jalen' target='_blank' className=' bg-yellow-400 active:bg-yellow-500 rounded-lg text-black font-semibold p-2 px-4 flex items-center gap-2'>
                             <CiCalendar />

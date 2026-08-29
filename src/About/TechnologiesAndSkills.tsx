@@ -8,6 +8,7 @@ import csharpLogo from "../assets/csharp-logo.png"
 import dotnetLogo from "../assets/dotnet-logo.svg"
 import blazorLogo from "../assets/blazorLogo.png"
 import { SiGraphql, SiElasticsearch, SiTypescript, SiSwift, SiGit } from "react-icons/si"
+import { FaDatabase } from "react-icons/fa"
 import { VscAzure, VscAzureDevops } from "react-icons/vsc"
 import { motion, useInView } from "framer-motion"
 
@@ -22,6 +23,8 @@ const groups: { label: string; items: Tech[] }[] = [
             { name: "GraphQL", icon: <SiGraphql className="w-6 h-6 text-pink-500" /> },
             { name: "Elasticsearch", icon: <SiElasticsearch className="w-6 h-6 text-cyan-400" /> },
             { name: "SQL Server", img: sqlLogo },
+            { name: "Cosmos DB", icon: <VscAzure className="w-6 h-6 text-sky-400" /> },
+            { name: "Marten", icon: <FaDatabase className="w-5 h-5 text-emerald-400" /> },
             { name: "Python", img: pythonLogo },
         ],
     },
