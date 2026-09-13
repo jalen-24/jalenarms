@@ -30,13 +30,8 @@ export const profile = {
   ],
 }
 
-/** Skills laid out as system layers, top (client) to bottom (platform). */
+/** Skills ordered top to bottom by how much of my day-to-day they take up. */
 export const stack: { layer: string; caption: string; items: string[] }[] = [
-  {
-    layer: "Client",
-    caption: "what users touch",
-    items: ["Blazor WASM", "React", "TypeScript", "Tailwind CSS", "SwiftUI"],
-  },
   {
     layer: "Services",
     caption: "where the logic lives",
@@ -56,6 +51,11 @@ export const stack: { layer: string; caption: string; items: string[] }[] = [
     layer: "Platform",
     caption: "how it ships and runs",
     items: ["Azure", "Azure DevOps", "CI/CD", "Windows IIS", "Git"],
+  },
+  {
+    layer: "Client",
+    caption: "what users touch",
+    items: ["Blazor WASM", "React", "TypeScript", "Tailwind CSS", "SwiftUI"],
   },
 ]
 

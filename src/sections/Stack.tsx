@@ -3,7 +3,7 @@ import { useRef } from "react"
 import { stack } from "@/data/site"
 import { Band, NodeLabel, Chip } from "@/components/site/primitives"
 
-/** Skills as system layers — client at the top, platform underneath. */
+/** Skills ordered top to bottom by how much of my day-to-day they take up. */
 const Stack = () => {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: "-80px" })
@@ -13,7 +13,7 @@ const Stack = () => {
       <div ref={ref}>
         <NodeLabel index="02">stack</NodeLabel>
         <p className="text-sm text-[color:var(--text-mute)] mt-4 mb-6 max-w-xl">
-          The layers I work in, top to bottom. Not a limit on what I&apos;ll pick up.
+          Where I spend most of my time, top to bottom. Not a limit on what I&apos;ll pick up.
         </p>
 
         <div className="relative">
