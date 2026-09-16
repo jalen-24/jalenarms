@@ -14,7 +14,7 @@ export type Role = {
 
 export const profile = {
   name: "Jalen Arms",
-  title: "Software Engineer",
+  title: ".NET Engineer",
   focus: "Backend & Distributed Systems",
   email: "jalenarms@outlook.com",
   avatar:
@@ -26,7 +26,7 @@ export const profile = {
   },
   bio: [
     "Hi, I'm Jalen Arms — a software engineer who works mostly in C# and .NET. I build backend APIs and services, the async messaging that connects them, and the data layer underneath, in both SQL and NoSQL databases.",
-    "I also set up CI/CD and handle deployments, write Python for data automation, and build front ends in Blazor WASM or React when a project needs one.",
+    "I also set up CI/CD and handle deployments, write Python for data automation, and build front ends in Blazor WASM when a project needs one.",
   ],
 }
 
@@ -60,7 +60,7 @@ export const stack: { layer: string; caption: string; items: string[] }[] = [
   {
     layer: "Client",
     caption: "what users touch",
-    items: ["Blazor WASM", "React", "TypeScript", "Tailwind CSS", "SwiftUI"],
+    items: ["Blazor WASM", "JavaScript / TypeScript", "HTML", "CSS"],
   },
 ]
 
@@ -93,18 +93,18 @@ export const roles: Role[] = [
     dates: "2023 — 2025",
     summary:
       "Built a shelter management platform from the ground up — a .NET Web API with a Blazor WASM client — that replaced the Excel workbooks shelters used to manage clientele, and became their system of record for HUD-mandated HMIS documentation.",
-    tags: ["C#", ".NET", "Blazor WASM", "React", "SQL Server", "Python"],
+    tags: ["C#", ".NET", "ASP.NET Core", "Blazor WASM", "SQL Server", "Python"],
     bullets: [
-      { key: "Blazor WASM", text: "built the bedboard — a bird's-eye view of the shelter's full client inventory, with drill-in to any client's active bedstay or profile — replacing manual spreadsheet roster reconciliation with a live view staff act on directly" },
-      { key: "Low-code template engine", text: "built a configurable templating system that persists entirely new data models from configuration alone, so staff capture new HMIS data points without a code change or redeploy" },
-      { key: "E-signature capture", text: "integrated an ePad ink signature pad with a reusable PDF generator that stamps client signatures and initials onto generated documents, giving shelters downloadable, audit-ready signed records" },
-      { key: "HIPAA compliance", text: "implemented role-based access control and field-level audit history so protected client data stays access-scoped and every change is attributable" },
-      { key: "Clean Architecture", text: "structured the solution to keep it testable and maintainable as shelter requirements changed" },
-      { key: "Blue-green deployment", text: "built CI/CD pipelines that run automated tests, deploy to a staging IIS site, then slot-swap between two IIS sites running in tandem, so releases land on the remote server without downtime and roll back with a swap" },
-      { key: "Stored procedures & views", text: "write and maintain business logic on a remote SQL Server instance serving both the application and staff reporting needs" },
-      { key: "Schema design", text: "model client, bedstay, and documentation data so the flexible template system can persist new record types without schema migrations" },
-      { key: "Automated ETL", text: "built pipelines scheduled through Windows Task Scheduler that process batches of billing claims, removing a recurring manual step from the billing cycle" },
-      { key: "Data ingestion", text: "normalize and import large Excel and CSV datasets into SQL Server, generalizing the data as needed so downstream reporting stays consistent" },
+      { key: "Blazor WASM", text: "built the bedboard, a real-time dashboard querying SQL Server for the shelter's full client inventory, with drill-in to any client's active bedstay or profile, replacing manual spreadsheet roster reconciliation with a live view staff act on directly" },
+      { key: "Low-code template engine", text: "built a configuration-driven templating system in C# that persists entirely new data models and HMIS fields from metadata alone, so staff capture new documentation requirements without a code change or redeploy" },
+      { key: "E-signature capture", text: "integrated an ePad ink signature pad via its SDK with a reusable .NET PDF generation service that stamps client signatures and initials onto generated documents, giving shelters downloadable, audit-ready signed records for HUD compliance reviews" },
+      { key: "HIPAA compliance", text: "implemented role-based access control (RBAC) and field-level audit history in ASP.NET Core so protected client data stays access-scoped by shelter and role, and every change is attributable for HIPAA and HUD audits" },
+      { key: "Clean Architecture", text: "structured the ASP.NET Core solution into Clean Architecture layers — domain, application, infrastructure — keeping the codebase testable and maintainable as shelter requirements changed" },
+      { key: "Blue-green deployment", text: "built CI/CD pipelines that run automated tests, deploy to a staging Windows IIS site, then slot-swap between two IIS servers running in tandem, so releases to the remote production server land without downtime and roll back with a swap" },
+      { key: "Stored procedures & views", text: "write and maintain stored procedures and views on a remote SQL Server instance serving both the Blazor WASM application and staff reporting needs" },
+      { key: "Schema design", text: "model client, bedstay, and documentation tables in SQL Server so the low-code template engine can persist new record types without schema migrations" },
+      { key: "Automated ETL", text: "built Python ETL pipelines scheduled through Windows Task Scheduler that process monthly billing claim batches, removing a recurring manual step from the billing cycle" },
+      { key: "Data ingestion", text: "normalize and import large Excel and CSV datasets into SQL Server using Python scripts, generalizing the data as needed so downstream reporting stays consistent" },
     ],
   },
   {

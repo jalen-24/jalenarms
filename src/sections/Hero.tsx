@@ -80,7 +80,7 @@ const Hero = () => (
       </div>
 
       <div className="flex flex-wrap gap-2 mt-4">
-        {["C#", ".NET", "Service bus", "SQL + NoSQL", "CI/CD"].map((t) => (
+        {["C#", ".NET", "Azure Service Bus", "SQL + NoSQL", "CI/CD"].map((t) => (
           <Chip key={t}>{t}</Chip>
         ))}
       </div>
