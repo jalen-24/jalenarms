@@ -40,17 +40,22 @@ export const stack: { layer: string; caption: string; items: string[] }[] = [
   {
     layer: "Messaging",
     caption: "how services talk",
-    items: ["Service bus", "Event-driven workflows", "State machines"],
+    items: ["Azure Service Bus", "Event-driven architecture", "State machines"],
   },
   {
     layer: "Data",
     caption: "where state rests",
-    items: ["SQL Server", "Cosmos DB", "Marten", "Elasticsearch", "ETL"],
+    items: ["SQL Server", "Cosmos DB", "Blob Storage", "Marten", "Elasticsearch", "ETL"],
   },
   {
     layer: "Platform",
     caption: "how it ships and runs",
-    items: ["Azure", "Azure DevOps", "CI/CD", "Windows IIS", "Git"],
+    items: ["Azure", "Azure Container Apps", "Azure DevOps", "CI/CD", "Application Insights", "Splunk", "Datadog", "Windows IIS", "Git"],
+  },
+  {
+    layer: "Practices",
+    caption: "how the team ships",
+    items: ["Agile / Scrum", "Sprint planning", "Cross-team coordination", "Production support & on-call"],
   },
   {
     layer: "Client",
@@ -68,16 +73,17 @@ export const roles: Role[] = [
     current: true,
     summary:
       "ADESA Clear, Carvana's digital wholesale auction — serving both first-party Carvana wholesale inventory and third-party sellers including BMW, Tesla, Chase, and Credit Union Leasing of America.",
-    tags: ["C#", ".NET", "Service bus", "GraphQL", "Elasticsearch", "Azure DevOps"],
+    tags: ["C#", ".NET", "Azure Service Bus", "GraphQL", "Elasticsearch", "Azure Container Apps", "Agile / Scrum"],
     bullets: [
-      { key: "Listing automation", text: "develop and maintain the .NET microservices that automate daily listing creation for auction inventory" },
-      { key: "Async data flow", text: "work across distributed services that communicate over a service bus, decoupled and independently deployable" },
-      { key: "Event-driven workflows", text: "develop state machine workflows that orchestrate inventory lifecycle transitions and listing creation across those services" },
-      { key: "Production support", text: "diagnose and resolve customer-impacting incidents across distributed services, feeding fixes back to reduce repeat failures" },
-      { key: "Search API", text: "own the Elasticsearch ingestion pipelines behind vehicle discovery, keeping listings searchable for web and mobile clients as inventory turns over" },
+      { key: ".NET microservices", text: "develop and maintain .NET microservices deployed on Azure Container Apps that automate daily listing creation for auction inventory, keeping each service independently deployable" },
+      { key: "Azure Service Bus", text: "coordinate asynchronous communication between distributed .NET services using Azure Service Bus topics and subscriptions, decoupling producers and consumers so each service ships and scales independently" },
+      { key: "Event-driven architecture", text: "design state machine workflows that orchestrate inventory lifecycle transitions and listing creation, publishing domain events that downstream teams' services consume" },
+      { key: "Production support", text: "use Azure Application Insights, Splunk, and Datadog to diagnose and resolve customer-impacting incidents across distributed services during on-call rotations, reducing repeat failures" },
+      { key: "Elasticsearch", text: "own the Search API and ingestion pipelines behind vehicle discovery, keeping listings searchable for web and mobile clients as inventory turns over daily" },
       { key: "Index tuning", text: "tune index mappings and query construction so search stays fast and relevant as inventory changes" },
-      { key: "GraphQL subgraphs", text: "compose subgraphs with Hot Chocolate through a Fusion gateway, giving client teams one typed endpoint instead of calls to each backing service" },
+      { key: "GraphQL", text: "compose subgraphs with Hot Chocolate through a Fusion gateway, giving client teams one typed endpoint instead of calls to each backing service" },
       { key: "Azure DevOps CI/CD", text: "automate builds, deployments, and releases across multiple production services, shortening the path from merge to production" },
+      { key: "Agile & cross-team coordination", text: "participate in daily standups and sprint planning as part of a Scrum team, coordinating with 8-9 other engineering teams to align on API contracts and shared service changes ahead of each release" },
     ],
   },
   {
@@ -89,7 +95,7 @@ export const roles: Role[] = [
       "Built a shelter management platform from the ground up — a .NET Web API with a Blazor WASM client — that replaced the Excel workbooks shelters used to manage clientele, and became their system of record for HUD-mandated HMIS documentation.",
     tags: ["C#", ".NET", "Blazor WASM", "React", "SQL Server", "Python"],
     bullets: [
-      { key: "Bedboard", text: "built a bird's-eye view of the shelter's full client inventory, with drill-in to any client's active bedstay or profile, replacing manual spreadsheet roster reconciliation with a live view staff act on directly" },
+      { key: "Blazor WASM", text: "built the bedboard — a bird's-eye view of the shelter's full client inventory, with drill-in to any client's active bedstay or profile — replacing manual spreadsheet roster reconciliation with a live view staff act on directly" },
       { key: "Low-code template engine", text: "built a configurable templating system that persists entirely new data models from configuration alone, so staff capture new HMIS data points without a code change or redeploy" },
       { key: "E-signature capture", text: "integrated an ePad ink signature pad with a reusable PDF generator that stamps client signatures and initials onto generated documents, giving shelters downloadable, audit-ready signed records" },
       { key: "HIPAA compliance", text: "implemented role-based access control and field-level audit history so protected client data stays access-scoped and every change is attributable" },
