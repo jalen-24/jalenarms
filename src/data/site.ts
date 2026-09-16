@@ -44,7 +44,7 @@ export const stack: { layer: string; items: string[] }[] = [
   },
   {
     layer: "Platform",
-    items: ["Azure", "Azure Container Apps", "Azure DevOps", "CI/CD", "Application Insights", "Splunk", "Datadog", "Windows IIS", "Git"],
+    items: ["Azure", "Azure App Service", "Azure Container Apps", "Azure Functions", "Azure DevOps", "CI/CD", "Application Insights", "Splunk", "Datadog", "Windows IIS", "Git"],
   },
   {
     layer: "Practices",
@@ -65,9 +65,9 @@ export const roles: Role[] = [
     current: true,
     summary:
       "ADESA Clear, Carvana's digital wholesale auction — serving both first-party Carvana wholesale inventory and third-party sellers including BMW, Tesla, Chase, and Credit Union Leasing of America.",
-    tags: ["C#", ".NET", "Azure Service Bus", "GraphQL", "Elasticsearch", "Azure Container Apps", "Agile / Scrum"],
+    tags: ["C#", ".NET", "Azure Service Bus", "GraphQL", "Elasticsearch", "Azure App Service", "Azure Container Apps", "Azure Functions", "Agile / Scrum"],
     bullets: [
-      { key: ".NET microservices", text: "develop and maintain .NET microservices deployed on Azure Container Apps that automate daily listing creation for auction inventory, keeping each service independently deployable" },
+      { key: ".NET microservices", text: "develop and maintain .NET microservices deployed on Azure that automate daily listing creation for auction inventory, keeping each service independently deployable" },
       { key: "Azure Service Bus", text: "coordinate asynchronous communication between distributed .NET services using Azure Service Bus topics and subscriptions, decoupling producers and consumers so each service ships and scales independently" },
       { key: "Event-driven architecture", text: "design state machine workflows that orchestrate inventory lifecycle transitions and listing creation, publishing domain events that downstream teams' services consume" },
       { key: "Production support", text: "use Azure Application Insights, Splunk, and Datadog to diagnose and resolve customer-impacting incidents across distributed services during on-call rotations, reducing repeat failures" },
