@@ -10,7 +10,7 @@ const Footer = () => (
         </p>
         <p className="text-sm text-[color:var(--text-dim)]">{profile.name}</p>
         <p className="mono text-[11px] text-[color:var(--text-mute)] mt-1">
-          {profile.title} · {profile.focus}
+          {profile.title}
         </p>
       </div>
 
