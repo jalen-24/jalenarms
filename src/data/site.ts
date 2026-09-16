@@ -15,7 +15,6 @@ export type Role = {
 export const profile = {
   name: "Jalen Arms",
   title: ".NET Engineer",
-  focus: "Backend & Distributed Systems",
   email: "jalenarms@outlook.com",
   avatar:
     "https://res.cloudinary.com/dvlhy87zl/image/upload/v1740702434/ol51x81xxhex8v7mvqbu.png",
@@ -26,40 +25,33 @@ export const profile = {
   },
   bio: [
     "Hi, I'm Jalen Arms — a software engineer who works mostly in C# and .NET. I build backend APIs and services, the async messaging that connects them, and the data layer underneath, in both SQL and NoSQL databases.",
-    "I also set up CI/CD and handle deployments, write Python for data automation, and build front ends in Blazor WASM when a project needs one.",
   ],
 }
 
 /** Skills ordered top to bottom by how much of my day-to-day they take up. */
-export const stack: { layer: string; caption: string; items: string[] }[] = [
+export const stack: { layer: string; items: string[] }[] = [
   {
     layer: "Services",
-    caption: "where the logic lives",
     items: ["C#", ".NET / ASP.NET Core", "REST APIs", "GraphQL", "Python"],
   },
   {
     layer: "Messaging",
-    caption: "how services talk",
     items: ["Azure Service Bus", "Event-driven architecture", "State machines"],
   },
   {
     layer: "Data",
-    caption: "where state rests",
     items: ["SQL Server", "Cosmos DB", "Blob Storage", "Marten", "Elasticsearch", "ETL"],
   },
   {
     layer: "Platform",
-    caption: "how it ships and runs",
     items: ["Azure", "Azure Container Apps", "Azure DevOps", "CI/CD", "Application Insights", "Splunk", "Datadog", "Windows IIS", "Git"],
   },
   {
     layer: "Practices",
-    caption: "how the team ships",
     items: ["Agile / Scrum", "Sprint planning", "Cross-team coordination", "Production support & on-call"],
   },
   {
     layer: "Client",
-    caption: "what users touch",
     items: ["Blazor WASM", "JavaScript / TypeScript", "HTML", "CSS"],
   },
 ]
@@ -80,7 +72,6 @@ export const roles: Role[] = [
       { key: "Event-driven architecture", text: "design state machine workflows that orchestrate inventory lifecycle transitions and listing creation, publishing domain events that downstream teams' services consume" },
       { key: "Production support", text: "use Azure Application Insights, Splunk, and Datadog to diagnose and resolve customer-impacting incidents across distributed services during on-call rotations, reducing repeat failures" },
       { key: "Elasticsearch", text: "own the Search API and ingestion pipelines behind vehicle discovery, keeping listings searchable for web and mobile clients as inventory turns over daily" },
-      { key: "Index tuning", text: "tune index mappings and query construction so search stays fast and relevant as inventory changes" },
       { key: "GraphQL", text: "compose subgraphs with Hot Chocolate through a Fusion gateway, giving client teams one typed endpoint instead of calls to each backing service" },
       { key: "Azure DevOps CI/CD", text: "automate builds, deployments, and releases across multiple production services, shortening the path from merge to production" },
       { key: "Agile & cross-team coordination", text: "participate in daily standups and sprint planning as part of a Scrum team, coordinating with 8-9 other engineering teams to align on API contracts and shared service changes ahead of each release" },

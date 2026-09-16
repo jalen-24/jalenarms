@@ -39,8 +39,6 @@ const Hero = () => (
         </h1>
         <p className="mono text-sm md:text-base mt-3 text-[color:var(--accent)]">
           {profile.title}
-          <span className="text-[color:var(--text-mute)]"> · </span>
-          <span className="text-[color:var(--text-dim)]">{profile.focus}</span>
         </p>
 
         <div className="mt-7 space-y-4 max-w-2xl">

@@ -37,9 +37,6 @@ const Stack = () => {
                 <div className="node node-hover flex-1 p-4 md:p-5">
                   <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
                     <span className="mono text-xs text-[color:var(--accent)]">{group.layer}</span>
-                    <span className="mono text-[11px] text-[color:var(--text-mute)]">
-                      {group.caption}
-                    </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((item) => (
