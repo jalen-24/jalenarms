@@ -20,7 +20,7 @@ export const profile = {
   avatar:
     "https://res.cloudinary.com/dvlhy87zl/image/upload/v1740702434/ol51x81xxhex8v7mvqbu.png",
   links: {
-    github: "https://github.com/jalenarms1",
+    github: "https://github.com/jalen-24",
     linkedin: "https://linkedin.com/in/jalen-arms-38304a241",
     upwork: "https://www.upwork.com/freelancers/~01cd6b779e11f90eb8?mp_source=share",
   },
